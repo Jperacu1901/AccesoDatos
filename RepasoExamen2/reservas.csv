@@ -1,0 +1,6 @@
+id_reserva,cliente,noches,precio_noche,estado
+R001,Laura Torres,4,80.00,Confirmada
+R002,Marcos Sanz,2,120.00,Confirmada
+R003,Lucia Gil,5,65.50,Cancelada
+R004,David Vera,3,95.00,Confirmada
+R005,Elena Blanco,1,150.00,Pendiente

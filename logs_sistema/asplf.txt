@@ -1,0 +1,49 @@
+def contar_elementos(ruta_directorio):
+    try:
+        elementos = os.listdir(ruta_directorio)
+
+        total_archivos = 0
+        total_carpetas = 0
+
+        for elemento in elementos:
+            ruta_completa = os.path.join(ruta_directorio, elemento)
+
+            if os.path.isfile(ruta_completa):
+                total_archivos += 1
+            elif os.path.isdir(ruta_completa):
+                total_carpetas += 1
+
+        return (total_archivos, total_carpetas)
+
+    except FileNotFoundError:
+        return (0, 0)
+
+resultado = contar_elementos('.')
+
+print(resultado)
+
+# Ejercicio 4
+
+def contar_elementos(ruta_directorio):
+    try:
+        elementos = os.listdir(ruta_directorio)
+
+        total_archivos = 0
+        total_carpetas = 0
+
+        for elemento in elementos:
+            ruta_completa = os.path.join(ruta_directorio, elemento)
+
+            if os.path.isfile(ruta_completa):
+                total_archivos += 1
+            elif os.path.isdir(ruta_completa):
+                total_carpetas += 1
+
+        return (total_archivos, total_carpetas)
+
+    except FileNotFoundError:
+        return (0, 0)
+
+resultado = contar_elementos('.')
+
+print(resultado)

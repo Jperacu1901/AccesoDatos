@@ -1,0 +1,6 @@
+[
+    {"id": 1, "producto": "Teclado Mecánico", "precio": 49.99, "stock": 15, "categoria": "perifericos"},
+    {"id": 2, "producto": "Ratón Óptico", "precio": 19.99, "stock": 5, "categoria": "perifericos"},
+    {"id": 3, "producto": "Monitor 24 pulgadas", "precio": 149.50, "stock": 8, "categoria": "pantallas"},
+    {"id": 4, "producto": "Auriculares Bluetooth", "precio": 29.90, "stock": 0, "categoria": "audio"}
+]

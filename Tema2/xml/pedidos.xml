@@ -1,0 +1,2 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gestion_pedidos fecha_exportacion="2026-03-30"><pedido id="PED-001"><cliente>Empresa Alfa</cliente><total>1250.5</total><estado>entregado</estado></pedido><pedido id="PED-002"><cliente>Tecnologías Beta</cliente><total>340.0</total><estado>pendiente</estado></pedido><pedido id="PED-003"><cliente>Sistemas Gamma</cliente><total>890.25</total><estado>entregado</estado></pedido></gestion_pedidos>

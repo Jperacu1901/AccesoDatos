@@ -1,0 +1,2 @@
+<?xml version='1.0' encoding='utf-8'?>
+<inventario ejercicios="2026" modulo="Facturacion"><factura codigo="FAC-2026-01"><cliente>Talleres Hermanos Sánchez</cliente><importe_total>1450.0</importe_total><recargo>NO</recargo></factura><factura codigo="FAC-2026-03"><cliente>Imprenta Rápida</cliente><importe_total>410.5</importe_total><recargo>SI</recargo></factura></inventario>

@@ -1,0 +1,2 @@
+<?xml version='1.0' encoding='utf-8'?>
+<infraestructura entorno="Produccion" zona="eu-west-1"><servidor ip="192.168.1.10"><hostname>srv-db-01</hostname><ram_gb>32</ram_gb><estado>ONLINE</estado></servidor><servidor ip="192.168.1.20"><hostname>srv-web-01</hostname><ram_gb>16</ram_gb><estado>ONLINE</estado></servidor><servidor ip="192.168.1.30"><hostname>srv-bk-01</hostname><ram_gb>8</ram_gb><estado>OFFLINE</estado></servidor></infraestructura>

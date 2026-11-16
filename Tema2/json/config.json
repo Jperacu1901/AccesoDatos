@@ -1,0 +1,6 @@
+{
+  "aplicacion": "Sistema DAM",
+  "version": 1.0,
+  "modo_debug": false,
+  "modulos_activos": ["autenticacion", "usuarios"]
+}

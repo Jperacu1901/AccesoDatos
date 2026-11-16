@@ -1,0 +1,29 @@
+[
+    {
+        "id": 1,
+        "producto": "Teclado Mecánico",
+        "categoria": "perifericos",
+        "precio_original": 49.99,
+        "precio_rebajado": 44.99,
+        "stock": 15,
+        "valor_total_stock": 674.85
+    },
+    {
+        "id": 2,
+        "producto": "Ratón Óptico",
+        "categoria": "perifericos",
+        "precio_original": 19.99,
+        "precio_rebajado": 17.99,
+        "stock": 5,
+        "valor_total_stock": 89.95
+    },
+    {
+        "id": 3,
+        "producto": "Monitor 24 pulgadas",
+        "categoria": "pantallas",
+        "precio_original": 149.5,
+        "precio_rebajado": 134.55,
+        "stock": 8,
+        "valor_total_stock": 1076.4
+    }
+]

@@ -1,0 +1,6 @@
+[
+    {"id_pedido": 101, "cliente": "Lucía", "total": 120.50, "entregado": true, "items": 3},
+    {"id_pedido": 102, "cliente": "Marcos", "total": 45.00, "entregado": false, "items": 1},
+    {"id_pedido": 103, "cliente": "Elena", "total": 210.00, "entregado": false, "items": 4},
+    {"id_pedido": 104, "cliente": "Pablo", "total": 85.20, "entregado": true, "items": 2}
+]
