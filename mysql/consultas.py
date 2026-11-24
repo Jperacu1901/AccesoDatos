@@ -265,22 +265,58 @@ try:
     #   print(f"Nombre: {emp[0]} {emp[1]} | Puesto: {emp[2]} | Salario: {emp[3]} €")
 
     # Consulta 18
+    # sql = """
+    #   SELECT nombre, apellidos
+    #   FROM empleados
+    #   WHERE id IN (
+    #     SELECT a.empleado_id
+    #     FROM asignaciones a
+    #     INNER JOIN proyectos p ON a.proyecto_id = p.id
+    #     WHERE p.presupuesto > 100000
+    #   )
+    # """
+    # cursor.execute(sql)
+    # empleados_proyectos_caros = cursor.fetchall()
+
+    # print("---EMPLEADOS EN PROYECTOS CON PRESUPUESTO SUPERIOR A 100000 €---")
+    # for emp in empleados_proyectos_caros:
+    #   print(f"Nombre: {emp[0]} {emp[1]}")
+
+    # Consulta 19
+    # sql = """
+    #   SELECT d.nombre,
+    #         COUNT(e.id) AS total_empleados,
+    #         ROUND(AVG(e.salario), 2) AS salario_medio
+    #   FROM departamentos d
+    #   INNER JOIN empleados e ON d.id = e.departamento_id
+    #   GROUP BY d.id, d.nombre
+    #   HAVING COUNT(e.id) > 2 AND AVG(e.salario) > 35000
+    # """
+    # cursor.execute(sql)
+    # departamentos_filtrados = cursor.fetchall()
+
+    # print("---DEPARTAMENTOS CON 2 EMPLEADOS O  MAS Y SALARIO MEDIO MAYOR A 35.000 €---")
+    # for dept in departamentos_filtrados:
+    #   print(f"Departamento: {dept[0]} | Empleados: {dept[1]} | Salario medio: {dept[2]} €")
+
+    # Consulta 20
     sql = """
-      SELECT nombre, apellidos
-      FROM empleados
-      WHERE id IN (
-        SELECT a.empleado_id
-        FROM asignaciones a
-        INNER JOIN proyectos p ON a.proyecto_id = p.id
-        WHERE p.presupuesto > 100000
-      )
+      SELECT c.nombre_empresa,
+            c.pais,
+            COUNT(p.id) AS total_proyectos,
+            COALESCE(SUM(p.presupuesto), 0) AS presupuesto_acumulado
+      FROM clientes c
+      LEFT JOIN proyectos p ON c.id = p.cliente_id
+      GROUP BY c.id, c.nombre_empresa, c.pais
+      ORDER BY presupuesto_acumulado DESC
     """
     cursor.execute(sql)
-    empleados_proyectos_caros = cursor.fetchall()
+    informe_clientes = cursor.fetchall()
 
-    print("---EMPLEADOS EN PROYECTOS CON PRESUPUESTO SUPERIOR A 100000 €---")
-    for emp in empleados_proyectos_caros:
-      print(f"Nombre: {emp[0]} {emp[1]}")
+    print("---INFORME DE CLIENTES---")
+    for cli in informe_clientes:
+      print(f"Empresa: {cli[0]} | País: {cli[1]} | Proyectos: {cli[2]} | Presupuesto acumulado: {cli[3]} €")
+
 
 except Error as e:
   print("Error al consultar la base de datos:", e)
