@@ -1,0 +1,23 @@
+# Ejercicio B4
+    sql = """
+      UPDATE empleados
+      SET salario = salario + %s
+      WHERE email = %s
+    """
+    datos = (1500.00, "mluna@techcorp.es")
+    cursor.execute(sql, datos)
+    conexion.commit()
+
+    print("---ACTUALIZACIÓN SALARIAL---")
+    print(f"Filas actualizadas: {cursor.rowcount}")
+
+    sql_select = """
+      SELECT nombre, apellidos, email, salario
+      FROM empleados
+      WHERE email = %s
+    """
+    cursor.execute(sql_select, ("mluna@techcorp.es",))
+    empleado = cursor.fetchone()
+
+    if empleado:
+      print(f"Empleado: {empleado[0]} {empleado[1]} | Email: {empleado[2]} | Nuevo salario: {empleado[3]} €")
